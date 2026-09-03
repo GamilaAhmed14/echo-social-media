@@ -26,12 +26,13 @@ let queryClient = new  QueryClient();
 let route = createBrowserRouter([
   {path:"",element:<Layout/>,children:[
     {path:"home",element:<ProtectedRoute><Home/></ProtectedRoute>},
+     {index:true,element:<ProtectedRoute><Home/></ProtectedRoute>},
     {path:"home/postdetails/:id",element:<ProtectedRoute><PostDetails/></ProtectedRoute>},
     {path:"profile", element:<ProtectedRoute><Profile/></ProtectedRoute>},
+     {path:"resetpassword", element:<ProtectedRoute><ResetPasswordForm/></ProtectedRoute>},
     {path:"register",element:<Register/>},
     {path:"login",element:<Login/>},
     {path:"logout", element:<Register/>},
-    {path:"resetpassword", element:<ResetPasswordForm/>},
     {path:"*",element:<NotFound/>},
   ]}
 ])
